@@ -1,0 +1,9 @@
+provider,version,path,implementation,schemaVersion,resourceType,useJSONNumber,token
+random,4.0.0-alpha.0+dev,random.random_uuid,pf,0,resource,false,random:index/randomUuid:RandomUuid
+random,4.0.0-alpha.0+dev,random.random_bytes,pf,0,resource,false,random:index/randomBytes:RandomBytes
+random,4.0.0-alpha.0+dev,random.random_id,pf,0,resource,false,random:index/randomId:RandomId
+random,4.0.0-alpha.0+dev,random.random_integer,pf,0,resource,false,random:index/randomInteger:RandomInteger
+random,4.0.0-alpha.0+dev,random.random_password,pf,3,resource,false,random:index/randomPassword:RandomPassword
+random,4.0.0-alpha.0+dev,random.random_pet,pf,0,resource,false,random:index/randomPet:RandomPet
+random,4.0.0-alpha.0+dev,random.random_shuffle,pf,0,resource,false,random:index/randomShuffle:RandomShuffle
+random,4.0.0-alpha.0+dev,random.random_string,pf,2,resource,false,random:index/randomString:RandomString
