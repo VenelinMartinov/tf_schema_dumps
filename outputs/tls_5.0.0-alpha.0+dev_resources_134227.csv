@@ -1,0 +1,11 @@
+provider,version,path,implementation,schemaVersion,resourceType,useJSONNumber,token
+tls,,tls.proxy.Elem,sdkv2,0,nested,false,
+tls,,tls.tls_locally_signed_cert,sdkv2,0,resource,false,tls:index/locallySignedCert:LocallySignedCert
+tls,,tls.tls_self_signed_cert.subject.Elem,sdkv2,0,nested,false,tls:index/selfSignedCert:SelfSignedCert
+tls,,tls.tls_self_signed_cert,sdkv2,0,resource,false,tls:index/selfSignedCert:SelfSignedCert
+tls,,tls.tls_cert_request.subject.Elem,sdkv2,0,nested,false,tls:index/certRequest:CertRequest
+tls,,tls.tls_cert_request,sdkv2,0,resource,false,tls:index/certRequest:CertRequest
+tls,,tls.tls_private_key,sdkv2,0,resource,false,tls:index/privateKey:PrivateKey
+tls,,tls.tls_public_key,sdkv2,0,dataSource,false,tls:index/getPublicKey:getPublicKey
+tls,,tls.tls_certificate.certificates.Elem,sdkv2,0,nested,false,tls:index/getCertificate:getCertificate
+tls,,tls.tls_certificate,sdkv2,0,dataSource,false,tls:index/getCertificate:getCertificate

@@ -10,6 +10,9 @@ interface BucketPermissionToDataAccountArgs {
   snowpipeNotificationChannel?: pulumi.Input<string>;
 }
 
+const dw_workflows_loader = new pulumi.StackReference("dw-workflows-loader", {name: "pulumi/dwh-workflows-loader-prodbuckets/production"});
+const bucketReaderRole = dw_workflows_loader.getOutput("dwhBucketReaderRole");
+
 export class BucketPermissionToDataAccount extends pulumi.ComponentResource {
   constructor(
     name: string,
@@ -103,8 +106,8 @@ const bucket = new aws.s3.Bucket("terraform-schema-bucket", {
 
 new BucketPermissionToDataAccount("terraform-schema-bucket", {
   bucketName: bucket.bucket,
-  rolesArn: [],
-  addELBAccess: true,
+  rolesArn: [bucketReaderRole],
+  addELBAccess: false,
   enforceBucketOwnership: true,
 });
 
